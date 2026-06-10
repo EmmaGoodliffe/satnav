@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="GPX2Maps" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>stav to trin</name>
+    <desc>Converted from Google Maps
+Distance: 2.1 km
+Duration: 7 min
+Via: A4144</desc>
+    <link href="https://gpx2maps.com">
+      <text>Created with GPX2Maps</text>
+    </link>
+    <time>2026-05-21T17:26:57Z</time>
+  </metadata>
+  <wpt lat="51.7705900" lon="-1.2665000">
+    <name>Start</name>
+    <sym>Flag, Green</sym>
+  </wpt>
+  <wpt lat="51.7549100" lon="-1.2562400">
+    <name>End</name>
+    <sym>Flag, Red</sym>
+  </wpt>
+  <trk>
+    <name>stav to trin</name>
+    <trkseg>
+      <trkpt lat="51.7705900" lon="-1.2665000"/>
+      <trkpt lat="51.7703700" lon="-1.2664100"/>
+      <trkpt lat="51.7702900" lon="-1.2663800"/>
+      <trkpt lat="51.7698900" lon="-1.2662100"/>
+      <trkpt lat="51.7694100" lon="-1.2660000"/>
+      <trkpt lat="51.7692200" lon="-1.2659300"/>
+      <trkpt lat="51.7690400" lon="-1.2658700"/>
+      <trkpt lat="51.7689800" lon="-1.2658600"/>
+      <trkpt lat="51.7688300" lon="-1.2658100"/>
+      <trkpt lat="51.7688000" lon="-1.2658100"/>
+      <trkpt lat="51.7686500" lon="-1.2657700"/>
+      <trkpt lat="51.7684900" lon="-1.2657300"/>
+      <trkpt lat="51.7684400" lon="-1.2657300"/>
+      <trkpt lat="51.7682900" lon="-1.2657100"/>
+      <trkpt lat="51.7681600" lon="-1.2657000"/>
+      <trkpt lat="51.7680100" lon="-1.2656800"/>
+      <trkpt lat="51.7676300" lon="-1.2656000"/>
+      <trkpt lat="51.7670000" lon="-1.2654700"/>
+      <trkpt lat="51.7660000" lon="-1.2651600"/>
+      <trkpt lat="51.7656900" lon="-1.2650400"/>
+      <trkpt lat="51.7653000" lon="-1.2648900"/>
+      <trkpt lat="51.7652900" lon="-1.2648900"/>
+      <trkpt lat="51.7649400" lon="-1.2647900"/>
+      <trkpt lat="51.7648400" lon="-1.2647600"/>
+      <trkpt lat="51.7647400" lon="-1.2647200"/>
+      <trkpt lat="51.7646100" lon="-1.2646500"/>
+      <trkpt lat="51.7644000" lon="-1.2645200"/>
+      <trkpt lat="51.7642200" lon="-1.2644000"/>
+      <trkpt lat="51.7639900" lon="-1.2642700"/>
+      <trkpt lat="51.7638000" lon="-1.2641300"/>
+      <trkpt lat="51.7637600" lon="-1.2641000"/>
+      <trkpt lat="51.7637000" lon="-1.2640600"/>
+      <trkpt lat="51.7632900" lon="-1.2637700"/>
+      <trkpt lat="51.7632600" lon="-1.2637500"/>
+      <trkpt lat="51.7629900" lon="-1.2635700"/>
+      <trkpt lat="51.7627900" lon="-1.2634300"/>
+      <trkpt lat="51.7624600" lon="-1.2632100"/>
+      <trkpt lat="51.7621400" lon="-1.2629600"/>
+      <trkpt lat="51.7619900" lon="-1.2628300"/>
+      <trkpt lat="51.7616300" lon="-1.2625400"/>
+      <trkpt lat="51.7615000" lon="-1.2624500"/>
+      <trkpt lat="51.7609800" lon="-1.2620700"/>
+      <trkpt lat="51.7609600" lon="-1.2620600"/>
+      <trkpt lat="51.7608100" lon="-1.2619500"/>
+      <trkpt lat="51.7606500" lon="-1.2618400"/>
+      <trkpt lat="51.7606100" lon="-1.2618200"/>
+      <trkpt lat="51.7603500" lon="-1.2616400"/>
+      <trkpt lat="51.7602100" lon="-1.2615500"/>
+      <trkpt lat="51.7600400" lon="-1.2614200"/>
+      <trkpt lat="51.7599600" lon="-1.2613700"/>
+      <trkpt lat="51.7597900" lon="-1.2612800"/>
+      <trkpt lat="51.7597400" lon="-1.2612500"/>
+      <trkpt lat="51.7595300" lon="-1.2611500"/>
+      <trkpt lat="51.7592300" lon="-1.2610200"/>
+      <trkpt lat="51.7590800" lon="-1.2609500"/>
+      <trkpt lat="51.7590200" lon="-1.2609200"/>
+      <trkpt lat="51.7588700" lon="-1.2608300"/>
+      <trkpt lat="51.7586300" lon="-1.2606600"/>
+      <trkpt lat="51.7585500" lon="-1.2606000"/>
+      <trkpt lat="51.7584800" lon="-1.2605300"/>
+      <trkpt lat="51.7583700" lon="-1.2604100"/>
+      <trkpt lat="51.7583300" lon="-1.2603900"/>
+      <trkpt lat="51.7581300" lon="-1.2602100"/>
+      <trkpt lat="51.7581100" lon="-1.2602000"/>
+      <trkpt lat="51.7579700" lon="-1.2600400"/>
+      <trkpt lat="51.7576600" lon="-1.2598100"/>
+      <trkpt lat="51.7575600" lon="-1.2597900"/>
+      <trkpt lat="51.7572900" lon="-1.2597500"/>
+      <trkpt lat="51.7571100" lon="-1.2597000"/>
+      <trkpt lat="51.7569000" lon="-1.2596500"/>
+      <trkpt lat="51.7568700" lon="-1.2596300"/>
+      <trkpt lat="51.7568200" lon="-1.2596200"/>
+      <trkpt lat="51.7567400" lon="-1.2596000"/>
+      <trkpt lat="51.7566300" lon="-1.2595600"/>
+      <trkpt lat="51.7565000" lon="-1.2595300"/>
+      <trkpt lat="51.7562500" lon="-1.2594300"/>
+      <trkpt lat="51.7560800" lon="-1.2593500"/>
+      <trkpt lat="51.7557800" lon="-1.2592100"/>
+      <trkpt lat="51.7556400" lon="-1.2591400"/>
+      <trkpt lat="51.7555500" lon="-1.2590500"/>
+      <trkpt lat="51.7554300" lon="-1.2589900"/>
+      <trkpt lat="51.7552100" lon="-1.2588900"/>
+      <trkpt lat="51.7551500" lon="-1.2588600"/>
+      <trkpt lat="51.7548900" lon="-1.2586800"/>
+      <trkpt lat="51.7548100" lon="-1.2586300"/>
+      <trkpt lat="51.7547300" lon="-1.2585900"/>
+      <trkpt lat="51.7546300" lon="-1.2585500"/>
+      <trkpt lat="51.7544600" lon="-1.2585100"/>
+      <trkpt lat="51.7541900" lon="-1.2584500"/>
+      <trkpt lat="51.7542100" lon="-1.2583300"/>
+      <trkpt lat="51.7542600" lon="-1.2580900"/>
+      <trkpt lat="51.7542900" lon="-1.2578400"/>
+      <trkpt lat="51.7543300" lon="-1.2575500"/>
+      <trkpt lat="51.7543500" lon="-1.2573300"/>
+      <trkpt lat="51.7543600" lon="-1.2572100"/>
+      <trkpt lat="51.7543600" lon="-1.2571800"/>
+      <trkpt lat="51.7544100" lon="-1.2567100"/>
+      <trkpt lat="51.7545500" lon="-1.2567600"/>
+      <trkpt lat="51.7545800" lon="-1.2565800"/>
+      <trkpt lat="51.7546000" lon="-1.2565400"/>
+      <trkpt lat="51.7546300" lon="-1.2565100"/>
+      <trkpt lat="51.7546500" lon="-1.2564900"/>
+      <trkpt lat="51.7546600" lon="-1.2564600"/>
+      <trkpt lat="51.7546600" lon="-1.2564300"/>
+      <trkpt lat="51.7546700" lon="-1.2561600"/>
+      <trkpt lat="51.7549100" lon="-1.2562400"/>
+    </trkseg>
+  </trk>
+</gpx>

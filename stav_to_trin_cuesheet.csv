@@ -1,0 +1,14 @@
+Type,Notes,Distance (km) From Start,Elevation (m),Description,Edited
+Start,Start of route,0,0,,
+Right,Turn right onto Woodstock Road,0.04,67.00,,""
+Left,Turn left,0.06,67.00,,""
+Left,Turn left,0.06,67.00,,""
+Slight Left,Keep left,0.46,66.10,,""
+Slight Right,Turn slight right onto Woodstock Road,0.48,66.10,,""
+Straight,Continue onto Woodstock Road,1.41,68.70,,""
+Straight,Continue onto St Giles',1.48,68.20,,""
+Slight Left,Keep left onto St Giles',1.79,69.10,,""
+Straight,Continue onto Magdalen Street East,1.87,69.80,,""
+Left,Turn left onto Broad Street,1.98,71.90,,""
+Slight Left,Keep left onto Broad Street,2.13,69.80,,""
+End,End of route,2.14,69.80,

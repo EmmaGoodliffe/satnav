@@ -1,0 +1,49 @@
+{
+  "pedestrian": {
+    "fclasses": ["pedestrian", "footway", "steps"],
+    "colour": "tab:gray",
+    "thickness": 1
+  },
+  "service": { "fclasses": ["service"], "colour": "tab:pink", "thickness": 1 },
+  "track": {
+    "fclasses": [
+      "path",
+      "track",
+      "track_grade1",
+      "track_grade2",
+      "track_grade3",
+      "track_grade4",
+      "track_grade5"
+    ],
+    "colour": "tab:brown",
+    "thickness": 1
+  },
+  "busway": { "fclasses": ["busway"], "colour": "tab:purple", "thickness": 1 },
+  "cycleway": {
+    "fclasses": ["cycleway", "bridleway"],
+    "colour": "tab:green",
+    "thickness": 2
+  },
+  "minor": {
+    "fclasses": ["unclassified", "residential", "living_street"],
+    "colour": "tab:olive",
+    "thickness": 2
+  },
+  "major": {
+    "fclasses": [
+      "primary",
+      "secondary",
+      "tertiary",
+      "primary_link",
+      "secondary_link",
+      "tertiary_link"
+    ],
+    "colour": "tab:orange",
+    "thickness": 3
+  },
+  "motorway": {
+    "fclasses": ["motorway", "trunk", "motorway_link", "trunk_link"],
+    "colour": "tab:red",
+    "thickness": 4
+  }
+}

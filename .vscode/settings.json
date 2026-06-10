@@ -1,0 +1,17 @@
+{
+  "cSpell.words": [
+    "fclass",
+    "fclasses",
+    "figsize",
+    "gpxpy",
+    "linalg",
+    "numpy",
+    "osmnx",
+    "pyrosm",
+    "xlim",
+    "xlims",
+    "ylim",
+    "ylims"
+  ],
+  "python-envs.defaultEnvManager": "ms-python.python:venv"
+}
