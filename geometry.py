@@ -19,6 +19,12 @@ class Angle:
     def __repr__(self):
         return f"{self.deg:.4f}°"
 
+    def __add__(self, other: Angle):
+        return Angle(rad=self.rad + other.rad)
+
+    def __truediv__(self, denominator: int | float):
+        return Angle(rad=self.rad / denominator)
+
     def to(self, units: str):
         if units in ["rad", "radian", "radians"]:
             return self.rad
@@ -37,6 +43,12 @@ class Coord:
 
     def __repr__(self):
         return f"(φ = {self.lat}, λ = {self.long})"
+
+    def __add__(self, other: Coord):
+        return Coord(self.lat + other.lat, self.long + other.long)
+
+    def __truediv__(self, denominator: int | float):
+        return Coord(self.lat / denominator, self.long / denominator)
 
     def project(self):
         """project onto 2D pane"""

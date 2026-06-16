@@ -1,10 +1,10 @@
 - [x] read route
 - [ ] receive GPS location
-- [x] determine next instruction
+- [x] determine next cue
 - [ ] create map
   - `osmnx` can't do offline stuff (unless the exact coordinate is cached)
   - `pyrosm` can do offline but it can't do big files
   - `pyrosm` and `osmnx` could work together to convert `.pbf` to `.graphml` but the libraries don't like being in the same environment
   - [x] `geopandas` can do offline with speed with `.gpkg`. Yay!
-- [ ] show instruction and map on display
+- [ ] show cue and map on display
 - [ ] routing?

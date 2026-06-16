@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from fit_tool.fit_file import FitFile
 from geometry import Angle, Coord
-from route import Instruction, Route
+from route import Cue, Route
 from typing import Literal
 
 A = np.typing.NDArray[np.float64]
@@ -71,7 +71,7 @@ def fit_to_route(path: str):
         fv_to_coord(json["lap"][0]["end_position_lat"], json["lap"][0]["end_position_long"]),
         fv_to_sec(json["lap"][0]["total_elapsed_time"]),
         [
-            Instruction(
+            Cue(
                 fv_to_coord(cp["position_lat"], cp["position_long"]),
                 cp["name"]["value"],
                 cp["distance"]["value"],

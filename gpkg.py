@@ -3,7 +3,7 @@ import numpy as np
 from geometry import Angle, Coord
 from json import loads as load_json
 from matplotlib.axes import Axes
-from route import Instruction
+from route import Cue
 from shapely.geometry import Point
 
 A = np.typing.NDArray[np.float64]
@@ -24,7 +24,7 @@ class GpkgMap:
     def __init__(self, gdf: gpd.GeoDataFrame):
         self.gdf = gdf
 
-    def plot_raw(self, ax: Axes, bbox: A, me: Coord | None = None, instructions: list[Instruction] = []):
+    def plot_raw(self, ax: Axes, bbox: A, me: Coord | None = None, cues: list[Cue] = []):
         """Plot the map in (λ, φ) coordinates"""
         # Plot roads
         for road_name, road in roads_data.items():
@@ -39,9 +39,9 @@ class GpkgMap:
         # Plot me
         if me is not None:
             ax.plot(*me.long_lat("°"), "o", label="me")
-        # Plot instructions
-        for inst in instructions:
-            ax.plot(*inst.coord.long_lat("°"), "o", c="k", label="instruction")
+        # Plot cues
+        for cue in cues:
+            ax.plot(*cue.coord.long_lat("°"), "o", c="k", label="cue")
         # Aesthetics
         xlims, ylims = bbox.reshape(2, 2).T
         ax.set_xlim(*xlims)
@@ -49,9 +49,7 @@ class GpkgMap:
         leg = {label: handle for handle, label in zip(*ax.get_legend_handles_labels())}
         ax.legend(leg.values(), leg.keys())
 
-    def plot_rotated(
-        self, ax: Axes, angle: Angle, origin: Coord, me: Coord | None = None, instructions: list[Instruction] = []
-    ):
+    def plot_rotated(self, ax: Axes, angle: Angle, origin: Coord, me: Coord | None = None, cues: list[Cue] = []):
         """Plot the map in projected and rotated (x, y) coordinates"""
         # Plot roads
         # self.gdf.to_crs(MERCATOR).rotate(angle.deg, origin=tuple(origin.long_lat("°"))).plot(
@@ -68,9 +66,9 @@ class GpkgMap:
                         linewidth=road["thickness"],
                         label=road_name,
                     )
-        # Plot instructions
-        for inst in instructions:
-            rotate_projected(inst.coord, angle, origin).plot(ax=ax, c="k", label="instruction")
+        # Plot cues
+        for cue in cues:
+            rotate_projected(cue.coord, angle, origin).plot(ax=ax, c="k", label="cue")
         if me is not None:
             # Plot me
             projected_me = rotate_projected(me, angle, origin)
