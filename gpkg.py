@@ -11,7 +11,7 @@ A = np.typing.NDArray[np.float64]
 LONG_LAT = "EPSG:4326"
 MERCATOR = "EPSG:3857"
 
-with open("./roads.json", encoding="utf-8") as f:
+with open("./roads_styles.json", encoding="utf-8") as f:
     roads_data = load_json(f.read())
 
 
