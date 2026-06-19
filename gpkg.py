@@ -6,7 +6,7 @@ from matplotlib.axes import Axes
 from route import Cue, Instruction
 from shapely.geometry import Point
 
-A = np.typing.NDArray[np.float64]
+A = np.ndarray[tuple[int], np.dtype[np.float64]]
 
 LONG_LAT = "EPSG:4326"
 MERCATOR = "EPSG:3857"
@@ -25,6 +25,20 @@ def rotate_projected(c: Coord, angle: Angle, origin: Coord):
         .to_crs(MERCATOR)
         .rotate(angle.deg, origin=tuple(origin.long_lat("°")))
     )
+
+
+def closest(x: float, ys: A):
+    ds = np.abs(ys - x)
+    i = np.argmin(ds)
+    return ys[i]
+
+
+def get_radius(x: float):
+    p = int(np.log10(x))
+    options = np.array([[10**i / 2, 10**i] for i in range(1, p + 2)]).flatten()
+    ans = closest(x, options)
+    print(f"{x} => r = {ans}")
+    return ans
 
 
 with open("./road_styles.json", encoding="utf-8") as f:
@@ -96,7 +110,7 @@ class GpkgMap:
         projected_origin = rotate_projected(instruction.origin, angle, instruction.origin)
         projected_origin.plot(ax=ax, label="origin")
         # Aesthetics
-        radius = 2 * (10 ** int(np.log10(instruction.dist_until_cue) + 1))
+        radius = get_radius(instruction.dist_until_cue)
         ax.set_xlim(projected_origin.x[0] - (radius * 128 / 296), projected_origin.x[0] + (radius * 128 / 296))
         ax.set_ylim(projected_origin.y[0] - (radius), projected_origin.y[0] + (radius))
         ax.set_axis_off()
