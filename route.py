@@ -27,6 +27,7 @@ class Cue:
 
 class Instruction:
     def __init__(self, route: Route, cue_i: int, dist_until_cue: float):
+        self.route = route
         self.prev_cue, self.cue, self.next_cue = route.cues[cue_i - 1 : cue_i + 1 + 1]
         self.dist_until_cue = dist_until_cue  # distance until cue (m)
         self.origin = (self.prev_cue.coord + self.cue.coord) / 2
