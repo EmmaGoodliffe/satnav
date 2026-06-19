@@ -48,11 +48,11 @@ demo
 ----
 
 Clear
-fill (parent):	prep background
-text (parent):	prep text
-display:	update
-line (parent):	prep line
-rect (parent):	prep rectangle
+fill (parent): prep background
+text (parent): prep text
+display: update
+line (parent): prep line
+rect (parent): prep rectangle
 fill_rect (parent): prep filled rect
-display_Base:	update before partial updates
+display_Base: update before partial updates
 display_Partial: partially update
