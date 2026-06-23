@@ -4,8 +4,22 @@ from geometry import Coord, angle_between, bearing
 from matplotlib import pyplot as plt
 from typing import Literal
 
-A = np.typing.NDArray[np.float64]
+A = np.ndarray[tuple[int], np.dtype[np.float64]]
 FV = dict[Literal["value"] | Literal["units"], float | str]
+
+
+def first_exceeding(x: float, ys: A):
+    ys[ys < x] = np.inf
+    i = np.argmin(ys)
+    return ys[i]
+
+
+def get_radius(x: float) -> float:
+    p = int(np.log10(x))
+    options = np.array([[10**i / 2, 10**i] for i in range(1, p + 2)]).flatten()
+    ans = first_exceeding(x, options)
+    print(f"{x} => r = {ans}")
+    return ans
 
 
 class Cue:
@@ -29,8 +43,12 @@ class Instruction:
     def __init__(self, route: Route, cue_i: int, dist_until_cue: float):
         self.route = route
         self.prev_cue, self.cue, self.next_cue = route.cues[cue_i - 1 : cue_i + 1 + 1]
-        self.dist_until_cue = dist_until_cue  # distance until cue (m)
-        self.origin = (self.prev_cue.coord + self.cue.coord) / 2
+        self.dist_until_cue = dist_until_cue  # m
+        self.radius = get_radius(dist_until_cue)
+        if dist_until_cue > 1e3:
+            self.origin = (self.prev_cue.coord + self.cue.coord) / 2
+        else:
+            self.origin = self.cue.coord
         self.bearing = bearing(self.cue.xy - self.prev_cue.xy)
         self.total_distance_covered_along_route = self.cue.distance - dist_until_cue
 

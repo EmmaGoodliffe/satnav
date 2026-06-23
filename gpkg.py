@@ -27,23 +27,13 @@ def rotate_projected(c: Coord, angle: Angle, origin: Coord):
     )
 
 
-def closest(x: float, ys: A):
-    ds = np.abs(ys - x)
-    i = np.argmin(ds)
-    return ys[i]
-
-
-def get_radius(x: float):
-    p = int(np.log10(x))
-    options = np.array([[10**i / 2, 10**i] for i in range(1, p + 2)]).flatten()
-    ans = closest(x, options)
-    print(f"{x} => r = {ans}")
-    return ans
-
-
 with open("./road_styles.json", encoding="utf-8") as f:
     road_styles = load_json(f.read())
     # ['colourful' | 'grey']['pedestrian' | 'cycleway' | ...]['fclasses' | 'colour' | 'thickness']
+    # white (just for background): d-f
+    # light: 9-b
+    # dark: 5-7
+    # black: 0-3
 
 
 class GpkgMap:
@@ -76,10 +66,12 @@ class GpkgMap:
         ax.legend(leg.values(), leg.keys())
 
     def plot_instruction(
-        # self, ax: Axes, angle: Angle, origin: Coord, cues: list[Cue] = [], me: Coord | None = None, style="colourful"
         self,
         ax: Axes,
+        width: int,
+        height: int,
         instruction: Instruction,
+        me: Coord,
         style="colourful",
         legend=False,
     ):
@@ -98,21 +90,26 @@ class GpkgMap:
                         angle.deg, origin=tuple(instruction.origin.long_lat("°"))
                     ).plot(
                         ax=ax,
+                        zorder=1,
                         color=road["colour"],
                         linewidth=road["thickness"],
                         label=road_name,
-                        linestyle=get_val(road, "style") or "-",
+                        # linestyle=get_val(road, "style") or "-",
                     )
         # Plot cues
         for cue in instruction.route.cues:
-            rotate_projected(cue.coord, angle, instruction.origin).plot(ax=ax, c="k", label="cue")
+            rotate_projected(cue.coord, angle, instruction.origin).plot(
+                ax=ax, marker="X", c="w", ec="k", markersize=100, label="cue"
+            )
         # Plot origin
         projected_origin = rotate_projected(instruction.origin, angle, instruction.origin)
-        projected_origin.plot(ax=ax, label="origin")
+        # projected_origin.plot(ax=ax, marker="o", c="w", ec="k", markersize=50, label="origin")
+        # Plot me
+        rotate_projected(me, angle, instruction.origin).plot(ax=ax, marker="^", c="w", ec="k", markersize=150, label="me")
         # Aesthetics
-        radius = get_radius(instruction.dist_until_cue)
-        ax.set_xlim(projected_origin.x[0] - (radius * 128 / 296), projected_origin.x[0] + (radius * 128 / 296))
-        ax.set_ylim(projected_origin.y[0] - (radius), projected_origin.y[0] + (radius))
+        r = instruction.radius
+        ax.set_xlim(projected_origin.x[0] - (r * width / height), projected_origin.x[0] + (r * width / height))
+        ax.set_ylim(projected_origin.y[0] - (r), projected_origin.y[0] + (r))
         ax.set_axis_off()
         if legend:
             leg = {label: handle for handle, label in zip(*ax.get_legend_handles_labels())}

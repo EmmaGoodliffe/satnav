@@ -79,7 +79,7 @@
         "track_grade4",
         "track_grade5"
       ],
-      "colour": "#333",
+      "colour": "#666",
       "thickness": 1
     },
     "busway": {
@@ -90,12 +90,12 @@
     },
     "cycleway": {
       "fclasses": ["cycleway", "bridleway"],
-      "colour": "#111",
+      "colour": "#666",
       "thickness": 2
     },
     "minor": {
       "fclasses": ["unclassified", "residential", "living_street"],
-      "colour": "#111",
+      "colour": "#666",
       "thickness": 2
     },
     "major": {
@@ -107,7 +107,7 @@
         "secondary_link",
         "tertiary_link"
       ],
-      "colour": "#111",
+      "colour": "#666",
       "thickness": 3
     },
     "motorway": {
